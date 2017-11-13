@@ -5,3 +5,5 @@ const queryString = require('querystring')
 // queryString.parse();
 let string ='q=hello&u=hello&aq=chorme...';
 console.log(queryString.parse(string));
+const circle =require('./cirecle');
+console.log(circle.area(12))
