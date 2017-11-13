@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    80 years,
+    user input:yyyy-mm-dd
+    xxxxxx seconds......
+</pre>
+<div id="seconds">
+
+</div>
+<script>
+    const YEARS=80;
+    let birthday =new Date(prompt("input your birthday","1993-3-16"));
+    console.log(birthday)
+    let deathday  = new Date(birthday.setFullYear(birthday.getFullYear()+YEARS))
+    function showSeconds (){
+        let today =new Date()
+        let seconds = Math.round((deathday.getTime()-today.getTime())/1000);
+        document.getElementById("seconds").innerHTML=seconds;
+        setTimeout("showSeconds()",1000)
+    }
+    showSeconds()
+</script>
+</body>
+</html>

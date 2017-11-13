@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="showTime()">
+<div id="time"></div>
+<script>
+    function showTime(){
+        let date = new Date();
+        let h =date.getHours()
+        let m =date.getMinutes()
+        let s =date.getSeconds()
+        document.getElementById("time").innerHTML=h+":"+m+":"+s;
+        setTimeout("showTime()",1000)
+    }
+</script>
+<script src="5_set-timeout.js"></script>
+</body>
+</html>
